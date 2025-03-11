@@ -1,14 +1,18 @@
-package model;
+package beans;
 
 public class Etudiant {
+
     private int id;
     private String nom;
     private String prenom;
     private String email;
 
-   
+    public Etudiant(String nom, String prenom, String email) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+    }
 
-    
     public Etudiant(int id, String nom, String prenom, String email) {
         this.id = id;
         this.nom = nom;
@@ -16,7 +20,6 @@ public class Etudiant {
         this.email = email;
     }
 
-    
     public int getId() {
         return id;
     }
@@ -49,14 +52,13 @@ public class Etudiant {
         this.email = email;
     }
 
-   
     @Override
     public String toString() {
-        return "Etudiant{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "Etudiant{"
+                + "id=" + id
+                + ", nom='" + nom + '\''
+                + ", prenom='" + prenom + '\''
+                + ", email='" + email + '\''
+                + '}';
     }
 }
