@@ -36,10 +36,11 @@ CREATE TABLE Étudiant (
 );
 
 CREATE TABLE ParticipationTP (
-    id INT PRIMARY KEY AUTO_INCREMENT,
     tp_id INT,
     etudiant_id INT,
+    dateParticipation DATE,
     note FLOAT,
+    PRIMARY KEY (tp_id, etudiant_id),
     FOREIGN KEY (tp_id) REFERENCES TP(id),
     FOREIGN KEY (etudiant_id) REFERENCES Étudiant(id)
 );
