@@ -19,13 +19,13 @@ public class TPService implements IDao<TP> {
 
     @Override
     public boolean create(TP o) {
-        // Requête modifiée sans titre et description
-        String req = "INSERT INTO TP (date, salle, matiere) VALUES (?, ?, ?)";
+        // Requête avec l'ordre correct : matiere, date, salle
+        String req = "INSERT INTO TP (matiere, date, salle) VALUES (?, ?, ?)";
         try {
             PreparedStatement ps = connexion.getCn().prepareStatement(req);
-            ps.setDate(1, new java.sql.Date(o.getDate().getTime()));
-            ps.setString(2, o.getSalle());
-            ps.setString(3, o.getMatiere());
+            ps.setString(1, o.getMatiere());
+            ps.setDate(2, new java.sql.Date(o.getDate().getTime()));
+            ps.setString(3, o.getSalle());
             ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -50,13 +50,13 @@ public class TPService implements IDao<TP> {
 
     @Override
     public boolean update(TP o) {
-        // Requête modifiée sans titre et description
-        String req = "UPDATE TP SET date = ?, salle = ?, matiere = ? WHERE id = ?";
+        // Requête avec l'ordre correct : matiere, date, salle
+        String req = "UPDATE TP SET matiere = ?, date = ?, salle = ? WHERE id = ?";
         try {
             PreparedStatement ps = connexion.getCn().prepareStatement(req);
-            ps.setDate(1, new java.sql.Date(o.getDate().getTime()));
-            ps.setString(2, o.getSalle());
-            ps.setString(3, o.getMatiere());
+            ps.setString(1, o.getMatiere());
+            ps.setDate(2, new java.sql.Date(o.getDate().getTime()));
+            ps.setString(3, o.getSalle());
             ps.setInt(4, o.getId());
             ps.executeUpdate();
             return true;
@@ -76,9 +76,9 @@ public class TPService implements IDao<TP> {
             if (rs.next()) {
                 return new TP(
                         rs.getInt("id"),
+                        rs.getString("matiere"),
                         rs.getDate("date"),
-                        rs.getString("salle"),
-                        rs.getString("matiere")
+                        rs.getString("salle")
                 );
             }
         } catch (SQLException ex) {
@@ -97,9 +97,9 @@ public class TPService implements IDao<TP> {
             while (rs.next()) {
                 tps.add(new TP(
                         rs.getInt("id"),
+                        rs.getString("matiere"),
                         rs.getDate("date"),
-                        rs.getString("salle"),
-                        rs.getString("matiere")
+                        rs.getString("salle")
                 ));
             }
         } catch (SQLException ex) {

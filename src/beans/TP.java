@@ -5,37 +5,33 @@ import java.util.Date;
 public class TP {
 
     private int id;
-    
+    private String matiere;
     private Date date;
     private String salle;
-    private String matiere;
 
-    public TP( Date date, String salle, String matiere) {
-       
+    // Constructeur sans ID (Ajout d'un nouveau TP)
+    public TP(String matiere, Date date, String salle) {
+        this.matiere = matiere;
         this.date = date;
         this.salle = salle;
-        this.matiere = matiere;
     }
 
-    public TP(int id,  Date date, String salle, String matiere) {
+    // Constructeur avec ID (Lecture d'un TP existant)
+    public TP(int id, String matiere, Date date, String salle) {
         this.id = id;
-       
-        this.date = date;
-        this.salle = salle;
         this.matiere = matiere;
-    }
-
-    public TP( Date date, String salle) {
-     
         this.date = date;
         this.salle = salle;
     }
 
+    // Getters
     public int getId() {
         return id;
     }
 
-   
+    public String getMatiere() {
+        return matiere;
+    }
 
     public Date getDate() {
         return date;
@@ -45,15 +41,14 @@ public class TP {
         return salle;
     }
 
-    public String getMatiere() {
-        return matiere;
-    }
-
+    // Setters
     public void setId(int id) {
         this.id = id;
     }
 
-    
+    public void setMatiere(String matiere) {
+        this.matiere = matiere;
+    }
 
     public void setDate(Date date) {
         this.date = date;
@@ -63,17 +58,13 @@ public class TP {
         this.salle = salle;
     }
 
-    public void setMatiere(String matiere) {
-        this.matiere = matiere;
-    }
-
     @Override
     public String toString() {
         return "TP{"
                 + "id=" + id
+                + ", matiere='" + matiere + '\''
                 + ", date=" + date
                 + ", salle='" + salle + '\''
-                + ", matiere='" + matiere + '\''
                 + '}';
     }
 }

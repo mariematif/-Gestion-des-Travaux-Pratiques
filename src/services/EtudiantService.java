@@ -17,6 +17,10 @@ public class EtudiantService implements IDao<Etudiant> {
 
     private Connexion connexion;
 
+    public EtudiantService() {
+        this.connexion = Connexion.getInstance();
+    }
+
     @Override
     public boolean create(Etudiant o) {
         String req = "INSERT INTO Etudiant (nom, prenom, email) VALUES (?, ?, ?)";
@@ -48,7 +52,6 @@ public class EtudiantService implements IDao<Etudiant> {
     }
 
     @Override
-
     public boolean update(Etudiant o) {
         String req = "UPDATE Etudiant SET nom = ?, prenom = ?, email = ? WHERE id = ?";
         try {
@@ -106,5 +109,4 @@ public class EtudiantService implements IDao<Etudiant> {
         }
         return etudiants;
     }
-
 }

@@ -20,6 +20,10 @@ public class ParticipationTP {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public ParticipationTP(TP tp, Etudiant etudiant, Date dateParticipation, String note) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public TP getTp() {
         return tp;
     }
