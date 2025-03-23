@@ -67,5 +67,6 @@ CREATE TABLE utilisateur (
 - **JFreeChart** : Bibliothèque utilisée pour générer des graphiques statistiques (moyenne par TP).
 - **NetBeans IDE** : Environnement de développement intégré (IDE) utilisé pour concevoir les interfaces graphiques (via éditeur visuel) et organiser le projet.
 ---
-## Structure de la Base de Données
+## ## 🗂️ Structure du projet
+
 ![Image](https://github.com/user-attachments/assets/dbf36e43-7f94-42e9-a85c-f6fbf45f38f3)
