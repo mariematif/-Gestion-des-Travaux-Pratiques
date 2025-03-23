@@ -13,7 +13,9 @@ Ce projet est une application de gestion des travaux pratiques (TP) pour les ét
 - **Graphique des moyennes par TP** : Affiche un graphique en barres représentant la moyenne des notes par TP.
 
 ---
-
+## ✅ Diagramme de cas d’utilisation (Use Case)
+![Image](https://github.com/user-attachments/assets/2f3aa477-3a95-40ca-86e6-225e0e136c6c)
+---
 ## Structure de la Base de Données
 
 La base de données MySQL est composée des tables suivantes :
