@@ -49,3 +49,12 @@ CREATE TABLE ParticipationTP (
     FOREIGN KEY (tp_id) REFERENCES TP(id),
     FOREIGN KEY (etudiant_id) REFERENCES Étudiant(id)
 );
+CREATE TABLE utilisateur (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(50) DEFAULT 'user',
+    code_reinitialisation VARCHAR(10) DEFAULT NULL
+);
+
+```
