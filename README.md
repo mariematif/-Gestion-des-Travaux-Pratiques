@@ -14,6 +14,9 @@ Ce projet est une application de gestion des travaux pratiques (TP) pour les ét
 
 ---
 ## ✅ Diagramme de cas d’utilisation (Use Case)
+![Image](https://github.com/user-attachments/assets/d35495b8-709f-4746-99bf-7bc11185f4a5)
+---
+## ✅ Diagramme de classe
 ![Image](https://github.com/user-attachments/assets/2f3aa477-3a95-40ca-86e6-225e0e136c6c)
 ---
 ## Structure de la Base de Données
