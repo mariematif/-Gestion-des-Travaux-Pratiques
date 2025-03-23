@@ -58,3 +58,12 @@ CREATE TABLE utilisateur (
 );
 
 ```
+## 💻 Technologies utilisées
+
+- **Java SE 8+** : Langage principal de l'application.
+- **Swing (`javax.swing`)** : Bibliothèque pour l'interface graphique (UI).
+- **JDBC** : Accès à la base de données MySQL.
+- **MySQL** : Système de gestion de base de données relationnelle.
+- **JFreeChart** : Bibliothèque utilisée pour générer des graphiques statistiques (moyenne par TP).
+- **NetBeans IDE** : Environnement de développement intégré (IDE) utilisé pour concevoir les interfaces graphiques (via éditeur visuel) et organiser le projet.
+
