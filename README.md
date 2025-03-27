@@ -73,3 +73,6 @@ CREATE TABLE utilisateur (
 ---
 ## ## Vidéo de démonstration
 https://github.com/user-attachments/assets/2cb0f086-8c92-4a5b-b45b-a89b911f9cf8
+---
+## ## Vidéo de démonstration 2 (+avec set-up en utilisant un script)
+https://github.com/user-attachments/assets/6280126f-7c35-4b01-a948-c91237217a0d
